@@ -5,7 +5,7 @@ class movie {
     public $director;
     public $year;
 
-    public function __costruct($title, $genre, $director, $year)
+    public function __construct( string $_title, string $_genre, string $_director, int $_year)
     {
         $this->title = $_title;
         $this->genre = $_genre;
@@ -14,9 +14,11 @@ class movie {
     }
 
     public function bestFilm($title){
-        if($this->title === "Nomadland") {
-            return "Premi oscar come mmiglior film!!";
-        };
+        if($title === "Nomadland") {
+            return "Premio Oscar come mmiglior film!!";
+        } else {
+            return "";
+        }
     }
 }
 
